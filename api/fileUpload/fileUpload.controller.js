@@ -1,26 +1,13 @@
 const fileUploadService = require("../services/fileUpload.service.js");
 
-
-exports.uploadOrgLogo = (req, res, next) => {
-  fileUploadService.uploadOrgLogo(req)
+exports.uploadCompanyLogo = (req, res, next) => {
+  fileUploadService.uploadCompanyLogo(req)
     .then((e) => (console.log(e),res.json({imageName: e})))
     .catch(err => {res.sendStatus(401); console.log(err)})
 }
 
-exports.removeOrgLogo = (req, res, next) => {
-  fileUploadService.uploadOrgLogo(req.params.name)
-    .then(()=> res.json({}))
-    .catch(err => next(err));
-}
-
-exports.uploadUserLogo = (req, res, next) => {
-  fileUploadService.uploadOrgLogo(req)
-    .then((e) => (console.log(e),res.json({imageName: e})))
-    .catch(err => {res.sendStatus(401); console.log(err)})
-}
-
-exports.removeUserLogo = (req, res, next) => {
-  fileUploadService.uploadOrgLogo(req.params.name)
+exports.removeCompanyLogo = (req, res, next) => {
+  fileUploadService.removeCompanyLogo(req.params.name)
     .then(()=> res.json({}))
     .catch(err => next(err));
 }

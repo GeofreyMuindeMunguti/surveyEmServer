@@ -5,9 +5,7 @@ const Model = mongoose.model;
 // Schema
 const industrySchema = new Schema({
   _id: { type: Schema.Types.ObjectId, auto: true },
-  industryName: String,
-  createdAt: Date,
-  updatedAt: Date
+  industryName: String
 });
 
 // model

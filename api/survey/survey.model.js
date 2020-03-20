@@ -4,7 +4,8 @@ const Model = mongoose.model;
 
 // Schema
 const surveySchema = new Schema({
-  _id: { type: Schema.Types.ObjectId, auto: true }
+  _id: { type: Schema.Types.ObjectId, auto: true },
+  surveyName: String
 
 
 });

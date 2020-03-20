@@ -4,8 +4,13 @@ const Model = mongoose.model;
 
 // Schema
 const responseSchema = new Schema({
-  _id: { type: Schema.Types.ObjectId, auto: true }
-
+  _id: { type: Schema.Types.ObjectId, auto: true },
+  surveyId: String,
+  companyId: String,
+	answers:[{
+		questionId: String,
+		answer: String
+	}]
 
 });
 

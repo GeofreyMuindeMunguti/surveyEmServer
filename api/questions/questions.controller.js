@@ -19,6 +19,13 @@ exports.getOne = (req, res, next) => {
             .catch(err => next(err));
 };
 
+exports.surveyQuestions = (req, res, next) =>{
+    console.log(req.params.id);
+    questionService.getSurveyQuestions(req.params.id)
+     .then(rsps =>{res.json(rsps);})
+     .catch(err => next(err));
+}
+
 exports.update = (req, res, next) => {
     questionService.update(req.params.id, req.body)
         .then((rsp)=> {res.json(rsp);})

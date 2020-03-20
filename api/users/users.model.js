@@ -7,11 +7,10 @@ const Model = mongoose.model;
 // Schema
 const userSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, auto: true },
+  companyId: String,
   password: String,
   email: String,
-  userType: {type: String, enum: ['customer', 'orgAdmin', 'systemAdmin']},
-  createdAt: Date,
-  updatedAt: Date
+  userType: String
 });
 
 userSchema.pre('save', function (next) {

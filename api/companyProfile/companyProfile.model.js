@@ -6,11 +6,13 @@ const Model = mongoose.model;
 const companyProfileSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, auto: true },
   companyName: String,
-  logo: {url: String, name: String},
+  logo: {
+    url: String,
+    name: String
+  },
   numberOfEmployees: Number,
   companyType: String,
-  companyWebsite: String,
-
+  companyWebsite: String
 });
 
 // model

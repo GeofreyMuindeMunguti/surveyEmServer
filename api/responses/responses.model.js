@@ -12,7 +12,6 @@ const responseSchema = new Schema({
 		questionId: String,
 		answer: String
 	}]
-
 });
 
 // model

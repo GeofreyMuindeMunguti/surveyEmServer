@@ -12,7 +12,10 @@ const companyProfileSchema = new Schema({
   },
   numberOfEmployees: Number,
   companyType: String,
-  companyWebsite: String
+  companyWebsite: String,
+  companyAbout: String,
+  companyAddress: String,
+  companyEmail: String
 });
 
 // model

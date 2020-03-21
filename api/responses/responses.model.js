@@ -6,7 +6,8 @@ const Model = mongoose.model;
 const responseSchema = new Schema({
   _id: { type: Schema.Types.ObjectId, auto: true },
   surveyId: String,
-  companyId: String,
+  userId: String,
+  companyProfileId: String,
 	answers:[{
 		questionId: String,
 		answer: String
